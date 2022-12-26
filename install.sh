@@ -7,7 +7,7 @@ notes () {
 ======== WARM TIPS ========
 Before you submit any github issue, please do the following check:
 * make sure the docker daemon is running
-* make sure you use docker-compose v2: recommend 2.x.x, got $(docker-compose version --short 2>/dev/null || echo not install)
+* make sure you use docker compose v2: recommend 2.x.x, got $(docker compose version --short 2>/dev/null || echo not install)
 * check your internet connection if timeout happens
 ===========================
 EOF
@@ -25,10 +25,10 @@ cd apitable || exit 1
 curl -fLo docker-compose.tar.gz "${DOWNLOAD_URL}"
 tar -xvzf docker-compose.tar.gz
 
-docker-compose down -v --remove-orphans
+docker compose down -v --remove-orphans
 for i in {1..50}; do
-    if docker-compose pull; then
-        if docker-compose up -d; then
+    if docker compose pull; then
+        if docker compose up -d; then
             break
         fi
     fi
