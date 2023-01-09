@@ -15,7 +15,7 @@ EOF
 
 trap notes ERR
 
-DOWNLOAD_URL='https://legacy-s1.apitable.com/docker-compose.tar.gz'
+DOWNLOAD_URL='https://github.com/apitable/apitable.github.io/releases/latest/download/docker-compose.tar.gz'
 
 mkdir -p apitable
 cd apitable || exit 1
